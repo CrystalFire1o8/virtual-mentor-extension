@@ -1,4 +1,4 @@
-#Final model without function calling using llms
+# Final model without function calling using llms
 import json
 import os
 import sqlite3
@@ -149,7 +149,7 @@ def view_appointments() -> List[Dict]:
     ]
 
 def medical_qa(query: str) -> str:
-    result = qa(query)
+    result = qa.invoke({"query": query})
     return result['result']
 
 # Streamlit UI
